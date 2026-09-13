@@ -106,6 +106,24 @@ summary:focus-visible {
   background: var(--blue);
   color: var(--ink);
 }
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.1em;
+}
 .container {
   width: min(1376px, calc(100% - 112px));
   margin-inline: auto;
@@ -184,6 +202,10 @@ summary:focus-visible {
 }
 .nav-contact span {
   margin-left: 23px;
+}
+.nav-contact .icon {
+  margin-left: 23px;
+  font-size: 15px;
 }
 .navigation .nav-contact:hover {
   background: var(--ink);
@@ -497,6 +519,16 @@ summary:focus-visible {
   display: inline-block;
   transition: transform 0.2s;
 }
+.project-caption h3 .icon {
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+.project-caption h3 a:hover .icon,
+.project-caption h3 button:hover .icon {
+  transform: translate(3px, -3px);
+}
 .project-caption h3 a:hover span,
 .project-caption h3 button:hover span {
   transform: translate(3px, -3px);
@@ -662,6 +694,9 @@ summary:focus-visible {
   gap: 25px;
   margin-top: 12px;
 }
+.text-link .icon {
+  font-size: 15px;
+}
 /* About and tools */
 .about {
   background: var(--ink);
@@ -815,6 +850,15 @@ summary:focus-visible {
   font-weight: 400;
   transition: transform 0.3s;
 }
+.contact-title-link .contact-icon {
+  display: grid;
+  place-items: center;
+  width: clamp(62px, 8vw, 116px);
+  height: clamp(62px, 8vw, 116px);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: clamp(28px, 4vw, 56px);
+}
 .contact-title-link:hover > span {
   transform: translate(7px, -7px);
 }
@@ -880,6 +924,11 @@ summary:focus-visible {
 .footer > p,
 .footer > a:last-child {
   font-size: 10px;
+}
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 }
 .footer > p {
   color: var(--muted);

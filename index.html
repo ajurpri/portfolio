@@ -31,6 +31,20 @@
     <script src="app.js?v=2.0.0" defer></script>
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-external" viewBox="0 0 24 24">
+        <path d="M7 17 17 7M9 7h8v8" />
+      </symbol>
+      <symbol id="icon-down" viewBox="0 0 24 24">
+        <path d="M12 5v14M7 14l5 5 5-5" />
+      </symbol>
+      <symbol id="icon-up" viewBox="0 0 24 24">
+        <path d="M12 19V5M7 10l5-5 5 5" />
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+    </svg>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="header">
       <div class="container header-inner">
@@ -54,8 +68,10 @@
           <a href="#proyectos">Proyectos <span class="nav-count">07</span></a
           ><a href="#sobre-mi">Sobre mí</a
           ><a class="nav-contact" href="#contacto"
-            >Hablemos <span aria-hidden="true">↗</span></a
-          >
+            >Hablemos
+            <svg class="icon icon-external" aria-hidden="true">
+              <use href="#icon-external" /></svg
+          ></a>
         </nav>
       </div>
     </header>
@@ -77,16 +93,20 @@
           <div class="hero-intro">
             <p>Webs a medida · Tiendas online · Reservas</p>
             <a class="work-link" href="#proyectos"
-              >Ver mis proyectos <span aria-hidden="true">↓</span></a
-            >
+              >Ver mis proyectos
+              <svg class="icon icon-down" aria-hidden="true">
+                <use href="#icon-down" /></svg
+            ></a>
           </div>
           <a
             class="hero-instagram"
             href="https://www.instagram.com/alvaroo.dev/"
             target="_blank"
             rel="noopener noreferrer"
-            >@alvaroo.dev <span aria-hidden="true">↗</span></a
-          >
+            >@alvaroo.dev
+            <svg class="icon icon-external" aria-hidden="true">
+              <use href="#icon-external" /></svg
+          ></a>
         </div>
       </section>
       <section
@@ -140,9 +160,10 @@
               </div>
               <div class="cover-bottomline">
                 <span>Un espacio. Dos estilos.</span
-                ><span class="cover-arrow" aria-hidden="true">↗</span>
-              </div></a
-            >
+                ><span class="cover-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-external" /></svg
+                ></span></div
+            ></a>
             <div class="project-caption">
               <div>
                 <p class="project-kind">
@@ -153,8 +174,10 @@
                     href="https://pedritobarbershopandnails.es/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Pedrito Barber & Nails <span aria-hidden="true">↗</span></a
-                  >
+                    >Pedrito Barber & Nails
+                    <svg class="icon icon-external" aria-hidden="true">
+                      <use href="#icon-external" /></svg
+                  ></a>
                 </h3>
               </div>
               <span class="project-number">01</span>
@@ -187,9 +210,10 @@
               </div>
               <div class="cover-bottomline">
                 <span>VIII Centenario · Andújar</span
-                ><span class="cover-arrow" aria-hidden="true">↗</span>
-              </div></a
-            >
+                ><span class="cover-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-external" /></svg
+                ></span></div
+            ></a>
             <div class="project-caption">
               <div>
                 <p class="project-kind">
@@ -200,8 +224,10 @@
                     href="https://proyectohumilladero.es/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Proyecto Humilladero <span aria-hidden="true">↗</span></a
-                  >
+                    >Proyecto Humilladero
+                    <svg class="icon icon-external" aria-hidden="true">
+                      <use href="#icon-external" /></svg
+                  ></a>
                 </h3>
               </div>
               <span class="project-number">02</span>
@@ -235,9 +261,10 @@
               </div>
               <div class="cover-bottomline">
                 <span>El detalle también se lleva.</span
-                ><span class="cover-arrow" aria-hidden="true">↗</span>
-              </div></a
-            >
+                ><span class="cover-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-external" /></svg
+                ></span></div
+            ></a>
             <div class="project-caption">
               <div>
                 <p class="project-kind">E-commerce · Vue & Spring Boot</p>
@@ -246,8 +273,10 @@
                     href="https://ibernovia.es/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Ibernovia Atelier <span aria-hidden="true">↗</span></a
-                  >
+                    >Ibernovia Atelier
+                    <svg class="icon icon-external" aria-hidden="true">
+                      <use href="#icon-external" /></svg
+                  ></a>
                 </h3>
               </div>
               <span class="project-number">03</span>
@@ -282,8 +311,9 @@
                   loading="lazy" /></span
               ><span class="cover-bottomline"
                 ><span>Una plataforma para todo el club.</span
-                ><span class="cover-arrow" aria-hidden="true">+</span></span
-              >
+                ><span class="cover-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-plus" /></svg></span
+              ></span>
             </button>
             <div class="project-caption">
               <div>
@@ -294,7 +324,10 @@
                     data-project="tenis"
                     aria-haspopup="dialog"
                   >
-                    Tenis Isturgi <span aria-hidden="true">↗</span>
+                    Tenis Isturgi
+                    <svg class="icon icon-external" aria-hidden="true">
+                      <use href="#icon-external" />
+                    </svg>
                   </button>
                 </h3>
               </div>
@@ -338,7 +371,10 @@
                   data-project="redes"
                   aria-haspopup="dialog"
                 >
-                  Ver el proyecto <span aria-hidden="true">↗</span>
+                  Ver el proyecto
+                  <svg class="icon icon-external" aria-hidden="true">
+                    <use href="#icon-external" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -372,7 +408,10 @@
                   data-project="padel"
                   aria-haspopup="dialog"
                 >
-                  Ver el proyecto <span aria-hidden="true">↗</span>
+                  Ver el proyecto
+                  <svg class="icon icon-external" aria-hidden="true">
+                    <use href="#icon-external" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -407,7 +446,10 @@
                   data-project="patriarca"
                   aria-haspopup="dialog"
                 >
-                  Ver el proyecto <span aria-hidden="true">↗</span>
+                  Ver el proyecto
+                  <svg class="icon icon-external" aria-hidden="true">
+                    <use href="#icon-external" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -423,8 +465,10 @@
               href="https://www.instagram.com/alvaroo.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              >@alvaroo.dev <span aria-hidden="true">↗</span></a
-            >
+              >@alvaroo.dev
+              <svg class="icon icon-external" aria-hidden="true">
+                <use href="#icon-external" /></svg
+            ></a>
           </div>
           <div class="about-grid">
             <div class="about-statement">
@@ -503,8 +547,9 @@
           </div>
           <a class="contact-title-link" href="mailto:alvarorema2016@gmail.com"
             ><h2 id="contact-title">¿Lo <em>hacemos?</em></h2>
-            <span aria-hidden="true">↗</span></a
-          >
+            <span class="contact-icon" aria-hidden="true"
+              ><svg class="icon"><use href="#icon-external" /></svg></span
+          ></a>
           <div class="contact-bottom">
             <p>Cuéntame qué tienes en mente.<br />Vemos cómo darle forma.</p>
             <div class="email-contact">
@@ -539,8 +584,10 @@
               href="https://www.instagram.com/alvaroo.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              >O por Instagram <span aria-hidden="true">↗</span></a
-            >
+              >O por Instagram
+              <svg class="icon icon-external" aria-hidden="true">
+                <use href="#icon-external" /></svg
+            ></a>
           </div>
         </div>
       </section>
@@ -551,7 +598,11 @@
         ><span class="wordmark-dev">dev</span></a
       >
       <p>© <span id="year">2026</span> Álvaro · Diseño & desarrollo web.</p>
-      <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+      <a href="#inicio" class="back-to-top"
+        >Volver arriba
+        <svg class="icon icon-up" aria-hidden="true">
+          <use href="#icon-up" /></svg
+      ></a>
     </footer>
     <dialog
       class="project-dialog"

@@ -1,289 +1,578 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Álvaro | Desarrollador Web Full-Stack</title>
-  <meta name="description" content="Portfolio profesional de Álvaro, Desarrollador de Software especializado en Spring Boot, React, Vue, PWAs y automatizaciones con Google Sheets API.">
-  <link rel="stylesheet" href="style.css?v=1.0.1">
-</head>
-<body>
-
-  <!-- Mesh Gradient Ambient Light -->
-  <div class="mesh-glow mesh-1"></div>
-  <div class="mesh-glow mesh-2"></div>
-  <div class="mesh-glow mesh-3"></div>
-
-  <!-- Microdot Grid Background -->
-  <div class="dot-grid"></div>
-
-  <!-- Navigation Bar -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="#" class="brand-logo">
-        <span class="logo-accent">&lt;</span>Álvaro.dev<span class="logo-accent"> /&gt;</span>
-      </a>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#contacto" class="nav-cta">Contacto</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero-section" id="inicio">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <div class="badge-role">
-          <span class="pulse-dot"></span> Full-Stack Web Developer
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f1efe8" />
+    <title>Álvaro — Diseño y desarrollo web · Alvaroo.dev</title>
+    <meta
+      name="description"
+      content="Soy Álvaro, desarrollador web. Diseño webs y aplicaciones a medida. Conoce mis proyectos: Pedrito Barber & Nails, Proyecto Humilladero, Ibernovia y más."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta
+      property="og:title"
+      content="Álvaro — Una web a la altura de tu negocio."
+    />
+    <meta
+      property="og:description"
+      content="Diseño y desarrollo web a medida. Una selección de proyectos por Alvaroo.dev."
+    />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/manrope-800.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css?v=2.0.0" />
+    <script src="app.js?v=2.0.0" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="wordmark" href="#inicio" aria-label="Alvaroo.dev — Inicio"
+          >alvaroo<span class="wordmark-dot">.</span
+          ><span class="wordmark-dev">dev</span></a
+        >
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="navigation"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span>
+        </button>
+        <nav
+          class="navigation"
+          id="navigation"
+          aria-label="Navegación principal"
+        >
+          <a href="#proyectos">Proyectos <span class="nav-count">07</span></a
+          ><a href="#sobre-mi">Sobre mí</a
+          ><a class="nav-contact" href="#contacto"
+            >Hablemos <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="contenido">
+      <section class="hero container" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-topline">
+          <p class="eyebrow">Diseño web · Andújar</p>
+          <span class="hero-edition" aria-label="Septiembre de 2026"
+            >09—26</span
+          >
         </div>
-        <h1 class="hero-title">
-          Construyendo Sistemas <br>
-          <span class="gradient-text">Robustos y Escalables</span>
+        <h1 id="hero-title">
+          Tu negocio<br />también<br />necesita una<br /><span class="blue-word"
+            >web</span
+          >
+          a su altura.
         </h1>
-        <p class="hero-description">
-          Desarrollador web especializado en arquitecturas de backend distribuidas en <strong>Spring Boot (Java)</strong>, interfaces reactivas modernas en <strong>React/Vue</strong>, aplicaciones sin conexión (PWAs) y flujos automatizados de sincronización de datos en tiempo real.
-        </p>
-      </div>
-      <div class="hero-visual">
-        <div class="profile-glow"></div>
-        <div class="avatar-wrapper">
-          <img src="images/logo.jpeg" alt="Álvaro Dev" class="avatar-img">
+        <div class="hero-bottom">
+          <div class="hero-intro">
+            <p>Webs a medida · Tiendas online · Reservas</p>
+            <a class="work-link" href="#proyectos"
+              >Ver mis proyectos <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <a
+            class="hero-instagram"
+            href="https://www.instagram.com/alvaroo.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@alvaroo.dev <span aria-hidden="true">↗</span></a
+          >
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="section-projects" id="proyectos">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <p class="section-subtitle">Sistemas e implementaciones reales ejecutados en entornos de producción y educativos, analizados a fondo desde su persistencia de datos hasta su lógica algorítmica.</p>
-      </div>
-
-      <!-- Categories Filter Grid -->
-      <div class="filter-container">
-        <button class="filter-btn active" data-filter="all">Todos los Proyectos</button>
-        <button class="filter-btn" data-filter="fullstack">Sistemas Full-Stack</button>
-        <button class="filter-btn" data-filter="monitor">Sistemas de Monitorización</button>
-        <button class="filter-btn" data-filter="pwa">PWAs & Offline-First</button>
-        <button class="filter-btn" data-filter="integration">Integraciones & APIs</button>
-      </div>
-
-      <!-- Projects Grid Layout -->
-      <div class="projects-grid">
-        <!-- Ibernovia Atelier -->
-        <article class="project-card" data-category="fullstack" data-hue="345">
-          <div class="card-glow"></div>
-          <div class="card-image-container">
-            <img src="images/ibernovia.png" alt="Ibernovia Atelier" class="project-image">
-            <div class="card-overlay-badge">Atelier E-Commerce</div>
+      </section>
+      <section
+        class="projects container"
+        id="proyectos"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow section-index">01 / Trabajo seleccionado</p>
+            <h2 id="projects-title">Proyectos con <em>nombre propio.</em></h2>
           </div>
-          <div class="card-body">
-            <h3 class="card-title">Ibernovia Atelier</h3>
-            <p class="card-description">
-              Plataforma de comercio electrónico de alta costura nupcial. Gestiona catálogos, citas en probador físico y calcula tarifas comerciales multi-rol en tiempo real.
-            </p>
-            <div class="card-tags">
-              <span class="tech-tag">Vue 3</span>
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Firebase Auth</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://ibernovia.es" target="_blank" class="card-link-web">
-                Visitar Sitio
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Tenis Isturgi -->
-        <article class="project-card" data-category="fullstack" data-hue="208">
-          <div class="card-glow"></div>
-          <div class="card-image-container">
-            <img src="images/TENISISTURGI.png" alt="Tenis Isturgi" class="project-image">
-            <div class="card-overlay-badge">Portal del Club</div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Tenis Isturgi</h3>
-            <p class="card-description">
-              Plataforma deportiva integral. Controla calendarios de ligas, reservas de pistas y genera enfrentamientos balanceados con el algoritmo Berger (Round-Robin).
-            </p>
-            <div class="card-tags">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js (Strapi)</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Algoritmo Berger</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Reaktor Redes -->
-        <article class="project-card" data-category="monitor" data-hue="180">
-          <div class="card-glow"></div>
-          <div class="card-image-container">
-            <img src="images/REDES-MAPA.png" alt="Reaktor Redes" class="project-image">
-            <div class="card-overlay-badge">Monitorización de Red</div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Reaktor Redes</h3>
-            <p class="card-description">
-              Escáner e indicador de estado de red local de instituto. Muestra aulas e IPs caídas o activas en tiempo real sobre un mapa interactivo (vista de pájaro).
-            </p>
-            <div class="card-tags">
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">Thread Pools</span>
-              <span class="tech-tag">Sockets TCP</span>
-              <span class="tech-tag">SVG Dinámico</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Torneo Pádel -->
-        <article class="project-card" data-category="pwa" data-hue="208">
-          <div class="card-glow"></div>
-          <div class="card-image-container">
-            <img src="images/CARTEL-PADEL.png" alt="Torneo Pádel" class="project-image">
-            <div class="card-overlay-badge">Gestor de Torneos</div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Torneo Pádel</h3>
-            <p class="card-description">
-              PWA offline-first para gestión completa de torneos de pádel. Calcula fixtures por disponibilidad de horarios, exporta agendas en iCal e imágenes PNG.
-            </p>
-            <div class="card-tags">
-              <span class="tech-tag">JS ES6 PWA</span>
-              <span class="tech-tag">LocalStorage</span>
-              <span class="tech-tag">iCal Sync</span>
-              <span class="tech-tag">Google Webhooks</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Mantecados Patriarca -->
-        <article class="project-card" data-category="integration" data-hue="345">
-          <div class="card-glow"></div>
-          <div class="card-image-container">
-            <img src="images/Patriarca.png" alt="Mantecados El Patriarca" class="project-image">
-            <div class="card-overlay-badge">Pedidos & APIs</div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Mantecados Patriarca</h3>
-            <p class="card-description">
-              Sistema escolar de venta navideña. Sincroniza en tiempo real los pedidos de dulces directamente sobre una hoja de Google Sheets (a modo de base de datos Excel).
-            </p>
-            <div class="card-tags">
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">Google Sheets API</span>
-              <span class="tech-tag">Thymeleaf</span>
-              <span class="tech-tag">Firebase Auth</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Skills Section -->
-  <section class="section-skills" id="habilidades">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Stack Tecnológico</h2>
-        <p class="section-subtitle">Tecnologías y arquitecturas de software que manejo diariamente con dominio técnico y consistencia.</p>
-      </div>
-
-      <div class="skills-grid-container">
-        <!-- Backend Card -->
-        <div class="skill-category-card">
-          <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-          </div>
-          <h3>Backend & APIs</h3>
-          <ul class="skill-items-list">
-            <li><span>Spring Boot (Java 17)</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>Node.js / Express</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>Strapi Headless CMS</span> <span class="badge-level level-mid">Avanzado</span></li>
-            <li><span>Python (Automation Scripts)</span> <span class="badge-level level-expert">Avanzado</span></li>
-          </ul>
+          <p class="section-aside">
+            Negocios, historias y herramientas.<br />Cada proyecto tiene su
+            manera.
+          </p>
         </div>
-
-        <!-- Frontend Card -->
-        <div class="skill-category-card">
-          <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+        <div class="project-grid">
+          <article class="project project-pedrito">
+            <a
+              class="project-cover pedrito-cover"
+              href="https://pedritobarbershopandnails.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar Pedrito Barber & Nails (nueva pestaña)"
+              ><div class="cover-topline">
+                <span>Barbería & estética</span><span>Andújar, Jaén</span>
+              </div>
+              <div class="pedrito-art">
+                <div class="pedrito-photo">
+                  <img
+                    src="images/pedrito-cut.webp"
+                    alt="Trabajo de corte de cabello de Pedrito Barber"
+                    width="525"
+                    height="700"
+                    fetchpriority="high"
+                  />
+                </div>
+                <div class="nails-photo">
+                  <img
+                    src="images/pedrito-nails.webp"
+                    alt="Manicura rosa de Nails Dreams & Beauty"
+                    width="340"
+                    height="450"
+                    loading="lazy"
+                  />
+                </div>
+                <span class="pedrito-type" aria-hidden="true"
+                  >PEDRITO<span>BARBER & NAILS</span></span
+                >
+              </div>
+              <div class="cover-bottomline">
+                <span>Un espacio. Dos estilos.</span
+                ><span class="cover-arrow" aria-hidden="true">↗</span>
+              </div></a
+            >
+            <div class="project-caption">
+              <div>
+                <p class="project-kind">
+                  Web de negocio · Servicios & reservas
+                </p>
+                <h3>
+                  <a
+                    href="https://pedritobarbershopandnails.es/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Pedrito Barber & Nails <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+              </div>
+              <span class="project-number">01</span>
+            </div>
+            <p class="project-description">
+              Barbería y manicura bajo el mismo techo. Una web para conocer los
+              servicios, ver sus trabajos y encontrar la próxima cita.
+            </p>
+          </article>
+          <article class="project project-humilladero">
+            <a
+              class="project-cover humilladero-cover"
+              href="https://proyectohumilladero.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar Proyecto Humilladero (nueva pestaña)"
+              ><div class="cover-topline">
+                <span>Una historia compartida</span><span>1227—2027</span>
+              </div>
+              <div class="humilladero-art">
+                <span class="humilladero-type" aria-hidden="true"
+                  >Proyecto<br /><em>Humilladero</em></span
+                ><img
+                  src="images/humilladero.webp"
+                  alt="Diseño del monumento del Proyecto Humilladero"
+                  width="850"
+                  height="478"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cover-bottomline">
+                <span>VIII Centenario · Andújar</span
+                ><span class="cover-arrow" aria-hidden="true">↗</span>
+              </div></a
+            >
+            <div class="project-caption">
+              <div>
+                <p class="project-kind">
+                  Web cultural · Proyecto conmemorativo
+                </p>
+                <h3>
+                  <a
+                    href="https://proyectohumilladero.es/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Proyecto Humilladero <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+              </div>
+              <span class="project-number">02</span>
+            </div>
+            <p class="project-description">
+              La historia y el diseño de un proyecto para el VIII Centenario de
+              la Virgen de la Cabeza, con información y reserva de piezas.
+            </p>
+          </article>
+          <article class="project project-ibernovia">
+            <a
+              class="project-cover browser-cover ibernovia-cover"
+              href="https://ibernovia.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar Ibernovia Atelier (nueva pestaña)"
+              ><div class="cover-topline">
+                <span>Moda nupcial</span><span>Atelier & e-commerce</span>
+              </div>
+              <div class="browser-window">
+                <div class="browser-chrome" aria-hidden="true">
+                  <i></i><i></i><i></i><span>ibernovia.es</span>
+                </div>
+                <img
+                  src="images/ibernovia.webp"
+                  alt="Captura de Ibernovia Atelier y su colección de vestidos"
+                  width="1400"
+                  height="652"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cover-bottomline">
+                <span>El detalle también se lleva.</span
+                ><span class="cover-arrow" aria-hidden="true">↗</span>
+              </div></a
+            >
+            <div class="project-caption">
+              <div>
+                <p class="project-kind">E-commerce · Vue & Spring Boot</p>
+                <h3>
+                  <a
+                    href="https://ibernovia.es/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ibernovia Atelier <span aria-hidden="true">↗</span></a
+                  >
+                </h3>
+              </div>
+              <span class="project-number">03</span>
+            </div>
+            <p class="project-description">
+              Un catálogo de moda nupcial con citas en atelier y tarifas según
+              el perfil de cliente. Diseño y gestión en un mismo lugar.
+            </p>
+          </article>
+          <article class="project project-tenis">
+            <button
+              class="project-cover browser-cover tenis-cover"
+              type="button"
+              data-project="tenis"
+              aria-haspopup="dialog"
+              aria-label="Ver detalles de Tenis Isturgi"
+            >
+              <span class="cover-topline"
+                ><span>Dentro y fuera de la pista</span
+                ><span>Club de tenis</span></span
+              ><span class="tenis-title" aria-hidden="true"
+                >Punto. Set. <em>Web.</em></span
+              ><span class="browser-window"
+                ><span class="browser-chrome" aria-hidden="true"
+                  ><i></i><i></i><i></i
+                  ><span>Tenis Isturgi / Portal del club</span></span
+                ><img
+                  src="images/tenis.webp"
+                  alt="Captura del portal deportivo Tenis Isturgi"
+                  width="1400"
+                  height="546"
+                  loading="lazy" /></span
+              ><span class="cover-bottomline"
+                ><span>Una plataforma para todo el club.</span
+                ><span class="cover-arrow" aria-hidden="true">+</span></span
+              >
+            </button>
+            <div class="project-caption">
+              <div>
+                <p class="project-kind">Aplicación web · React & Strapi</p>
+                <h3>
+                  <button
+                    type="button"
+                    data-project="tenis"
+                    aria-haspopup="dialog"
+                  >
+                    Tenis Isturgi <span aria-hidden="true">↗</span>
+                  </button>
+                </h3>
+              </div>
+              <span class="project-number">04</span>
+            </div>
+            <p class="project-description">
+              Reservas de pistas, calendarios de liga y cruces de partidos. Una
+              plataforma para organizar el día a día del club.
+            </p>
+          </article>
+        </div>
+        <div class="archive-heading">
+          <h3>También he construido</h3>
+          <span class="eyebrow">Más allá de una web</span>
+        </div>
+        <div class="archive">
+          <details class="archive-item">
+            <summary>
+              <span class="archive-number">05</span
+              ><span class="archive-name">Reaktor Redes</span
+              ><span class="archive-category">Monitorización de red</span
+              ><span class="archive-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="archive-content">
+              <img
+                src="images/redes.webp"
+                alt="Mapa de aulas y estado de los equipos de Reaktor Redes"
+                width="1000"
+                height="633"
+                loading="lazy"
+              />
+              <div>
+                <p>
+                  Un mapa interactivo del instituto que permite consultar qué
+                  equipos están activos y localizar incidencias de red por aula.
+                </p>
+                <p class="technology-list">Spring Boot / Sockets TCP / SVG</p>
+                <button
+                  class="text-link"
+                  type="button"
+                  data-project="redes"
+                  aria-haspopup="dialog"
+                >
+                  Ver el proyecto <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+          </details>
+          <details class="archive-item">
+            <summary>
+              <span class="archive-number">06</span
+              ><span class="archive-name">Torneo Pádel</span
+              ><span class="archive-category">Aplicación sin conexión</span
+              ><span class="archive-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="archive-content">
+              <img
+                src="images/padel.webp"
+                alt="Interfaz del organizador de torneos de pádel"
+                width="1400"
+                height="511"
+                loading="lazy"
+              />
+              <div>
+                <p>
+                  Organización de torneos incluso sin conexión: horarios según
+                  disponibilidad y exportación de agendas a calendario e imagen.
+                </p>
+                <p class="technology-list">
+                  JavaScript / PWA / LocalStorage / iCal
+                </p>
+                <button
+                  class="text-link"
+                  type="button"
+                  data-project="padel"
+                  aria-haspopup="dialog"
+                >
+                  Ver el proyecto <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+          </details>
+          <details class="archive-item">
+            <summary>
+              <span class="archive-number">07</span
+              ><span class="archive-name">Mantecados Patriarca</span
+              ><span class="archive-category">Pedidos & automatización</span
+              ><span class="archive-plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="archive-content">
+              <img
+                src="images/patriarca.webp"
+                alt="Sistema de pedidos de Mantecados Patriarca"
+                width="1400"
+                height="580"
+                loading="lazy"
+              />
+              <div>
+                <p>
+                  Gestión de pedidos para una campaña escolar de dulces
+                  navideños, con sincronización en Google Sheets para consultar
+                  las ventas.
+                </p>
+                <p class="technology-list">
+                  Spring Boot / Google Sheets API / Firebase Auth
+                </p>
+                <button
+                  class="text-link"
+                  type="button"
+                  data-project="patriarca"
+                  aria-haspopup="dialog"
+                >
+                  Ver el proyecto <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="about" id="sobre-mi" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about-top">
+            <p class="eyebrow">02 / La persona detrás</p>
+            <a
+              class="social-link"
+              href="https://www.instagram.com/alvaroo.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >@alvaroo.dev <span aria-hidden="true">↗</span></a
+            >
           </div>
-          <h3>Frontend & UI</h3>
-          <ul class="skill-items-list">
-            <li><span>Vue 3 (Vite, Pinia, Axios)</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>React (Hooks, Context)</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>JavaScript ES6+</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>PWAs & Service Workers</span> <span class="badge-level level-mid">Intermedio</span></li>
-          </ul>
-        </div>
-
-        <!-- Persistence & Cloud Card -->
-        <div class="skill-category-card">
-          <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+          <div class="about-grid">
+            <div class="about-statement">
+              <h2 id="about-title">
+                Soy Álvaro.<br />Me gusta hacer<br />que las cosas<br /><em
+                  >funcionen.</em
+                >
+              </h2>
+              <span class="about-signature" aria-hidden="true"
+                >a<span>.</span></span
+              >
+            </div>
+            <div class="about-copy">
+              <p class="about-intro">
+                Una barbería, un club de tenis, un proyecto cultural. Lo que más
+                me interesa de hacer webs es todo lo que hay detrás de ellas.
+              </p>
+              <p>
+                Trabajo tanto en la parte que ves como en la que hace que todo
+                funcione: diseño, desarrollo, bases de datos e integraciones. Me
+                gusta entender para qué se va a usar una web antes de empezar a
+                construirla.
+              </p>
+              <p>
+                Y cuidar lo pequeño: que se lea bien en el móvil, que reservar
+                sea sencillo y que quien la use encuentre lo que necesita.
+              </p>
+              <div class="stack" id="habilidades">
+                <h3>Mis herramientas</h3>
+                <dl>
+                  <div>
+                    <dt>Interfaz</dt>
+                    <dd>React, Vue, JavaScript, HTML & CSS</dd>
+                  </div>
+                  <div>
+                    <dt>Backend</dt>
+                    <dd>Java, Spring Boot, Node.js, Python</dd>
+                  </div>
+                  <div>
+                    <dt>Datos</dt>
+                    <dd>MySQL, PostgreSQL, Firebase</dd>
+                  </div>
+                  <div>
+                    <dt>Conexiones</dt>
+                    <dd>APIs, Google Sheets, PWAs, Docker</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
           </div>
-          <h3>Bases de Datos & Integración</h3>
-          <ul class="skill-items-list">
-            <li><span>PostgreSQL / MySQL</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>Google Sheets API</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>Firebase Auth / Firestore</span> <span class="badge-level level-expert">Avanzado</span></li>
-            <li><span>Docker Compose / VPS</span> <span class="badge-level level-mid">Intermedio</span></li>
-          </ul>
+          <div class="process">
+            <p class="eyebrow">De principio a fin</p>
+            <div>
+              <span>01</span>
+              <h3>Lo hablamos.</h3>
+              <p>Qué necesitas, para quién y qué tiene que resolver.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Le damos forma.</h3>
+              <p>Estructura, diseño y desarrollo con sentido.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Lo ponemos en marcha.</h3>
+              <p>Revisión de los detalles y la web lista para salir.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section-contact" id="contacto">
-    <div class="container">
-      <div class="contact-box-glow"></div>
-      <div class="contact-glass-panel">
-        <h2 class="contact-title">¿Listo para construir algo juntos?</h2>
-        <p class="contact-text">
-          Estoy disponible para desarrollar integraciones a medida de APIs, automatizar bases de datos, implementar monitorizaciones de redes locales u optimizar sistemas web.
-        </p>
-        <div class="contact-buttons">
-          <a href="mailto:alvarorema2016@gmail.com" class="btn btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Enviar Email
-          </a>
-          <button class="btn btn-outline" id="copy-email-btn">
-            Copiar al Portapapeles
-          </button>
+      </section>
+      <section class="contact" id="contacto" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-top">
+            <p class="eyebrow">03 / Tu próximo proyecto</p>
+            <span class="contact-note">Todo empieza con un «hola».</span>
+          </div>
+          <a class="contact-title-link" href="mailto:alvarorema2016@gmail.com"
+            ><h2 id="contact-title">¿Lo <em>hacemos?</em></h2>
+            <span aria-hidden="true">↗</span></a
+          >
+          <div class="contact-bottom">
+            <p>Cuéntame qué tienes en mente.<br />Vemos cómo darle forma.</p>
+            <div class="email-contact">
+              <a href="mailto:alvarorema2016@gmail.com"
+                >alvarorema2016@gmail.com</a
+              ><button
+                id="copy-email"
+                type="button"
+                aria-label="Copiar dirección de correo"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <rect x="8" y="8" width="12" height="12" rx="1" />
+                  <path d="M16 8V4H4v12h4" />
+                </svg></button
+              ><span
+                id="copy-status"
+                class="copy-status"
+                role="status"
+                aria-live="polite"
+              ></span>
+            </div>
+            <a
+              class="instagram-contact"
+              href="https://www.instagram.com/alvaroo.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >O por Instagram <span aria-hidden="true">↗</span></a
+            >
+          </div>
         </div>
-        <div id="email-copied-toast" class="toast-alert">¡Email copiado con éxito!</div>
+      </section>
+    </main>
+    <footer class="footer container">
+      <a class="wordmark" href="#inicio"
+        >alvaroo<span class="wordmark-dot">.</span
+        ><span class="wordmark-dev">dev</span></a
+      >
+      <p>© <span id="year">2026</span> Álvaro · Diseño & desarrollo web.</p>
+      <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    </footer>
+    <dialog
+      class="project-dialog"
+      id="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-inner">
+        <button
+          class="dialog-close"
+          type="button"
+          aria-label="Cerrar proyecto"
+          autofocus
+        >
+          ×
+        </button>
+        <p class="eyebrow" id="dialog-category"></p>
+        <h2 id="dialog-title"></h2>
+        <img id="dialog-image" alt="" />
+        <p id="dialog-description"></p>
+        <p class="technology-list" id="dialog-technologies"></p>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer-element">
-    <div class="container">
-      <p>&copy; 2026 Álvaro Dev. Código limpio en TypeScript y Java. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-
-
-
-  <script src="app.js?v=1.0.1"></script>
-</body>
+    </dialog>
+  </body>
 </html>

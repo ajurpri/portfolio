@@ -105,6 +105,7 @@ p,
 h1,
 h2,
 h3,
+h4,
 ul {
   margin: 0;
 }
@@ -214,8 +215,20 @@ ul {
 
 .site-header .brand,
 .navigation,
-.menu-toggle {
+.menu-toggle,
+.legal-back {
   pointer-events: auto;
+}
+
+.legal-back {
+  padding: 13px 18px;
+  border: 1px solid rgba(7, 29, 49, 0.08);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 35px rgba(7, 29, 49, 0.07);
+  font-size: 0.78rem;
+  font-weight: 700;
+  backdrop-filter: blur(14px);
 }
 
 .site-header .brand {
@@ -953,6 +966,67 @@ ul {
 
 .studio-list article:hover p {
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Local focus */
+.local-focus {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(50px, 9vw, 140px);
+  margin-top: clamp(95px, 11vw, 165px);
+  padding-top: clamp(55px, 7vw, 95px);
+  border-top: 1px solid var(--line);
+}
+
+.local-focus-heading {
+  align-self: start;
+}
+
+.local-focus-heading h3 {
+  max-width: 720px;
+  margin: 45px 0 28px;
+  font-size: clamp(2.8rem, 5.1vw, 5.5rem);
+  letter-spacing: -0.07em;
+  line-height: 0.94;
+}
+
+.local-focus-heading > p:not(.section-label) {
+  max-width: 540px;
+  margin-bottom: 32px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.local-focus-list {
+  border-top: 1px solid var(--line);
+}
+
+.local-focus-list article {
+  display: grid;
+  min-height: 185px;
+  grid-template-columns: 48px minmax(190px, 0.75fr) minmax(220px, 1fr);
+  gap: 24px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.local-focus-list span {
+  color: var(--blue);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.local-focus-list h4 {
+  font-size: clamp(1.4rem, 2.25vw, 2.15rem);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.local-focus-list p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
 }
 
 /* Projects */
@@ -1928,6 +2002,11 @@ ul {
   accent-color: var(--blue);
 }
 
+.form-consent a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
 .form-actions {
   display: flex;
   min-height: 58px;
@@ -2072,9 +2151,88 @@ a.contact-channel strong {
 }
 
 .footer p,
-.footer > div > a:last-child {
+.footer-links {
   font-size: 0.68rem;
   font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.footer-links a {
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  border-bottom-color: currentColor;
+}
+
+/* Legal pages */
+.legal-page {
+  min-height: 100svh;
+  padding: 150px 0 100px;
+  background: var(--paper-2);
+}
+
+.legal-shell {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.45fr) minmax(0, 1fr);
+  gap: clamp(45px, 9vw, 140px);
+}
+
+.legal-aside {
+  position: sticky;
+  top: 130px;
+  align-self: start;
+}
+
+.legal-aside h1 {
+  margin: 35px 0 22px;
+  font-size: clamp(3.1rem, 5vw, 5.8rem);
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+}
+
+.legal-aside p:last-child {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.legal-content {
+  border-top: 1px solid var(--line);
+}
+
+.legal-content section {
+  padding: 35px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-content h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.legal-content p,
+.legal-content li {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.legal-content ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  list-style: square;
+}
+
+.legal-content a {
+  border-bottom: 1px solid currentColor;
+  color: var(--ink);
 }
 
 /* Dialog */
@@ -2210,6 +2368,15 @@ a.contact-channel strong {
 
   .studio-list article p {
     grid-column: 2;
+  }
+
+  .local-focus {
+    gap: 55px;
+  }
+
+  .local-focus-list article {
+    grid-template-columns: 38px minmax(180px, 0.8fr) minmax(190px, 1fr);
+    gap: 18px;
   }
 
   .about-portrait {
@@ -2378,6 +2545,22 @@ a.contact-channel strong {
 
   .studio-heading h3 {
     margin-top: 35px;
+  }
+
+  .local-focus {
+    grid-template-columns: 1fr;
+  }
+
+  .local-focus-heading > p:not(.section-label) {
+    max-width: 620px;
+  }
+
+  .legal-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-aside {
+    position: static;
   }
 
   .project,
@@ -2593,6 +2776,17 @@ a.contact-channel strong {
     grid-column: 2;
   }
 
+  .local-focus-list article {
+    min-height: auto;
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    padding: 28px 0;
+  }
+
+  .local-focus-list p {
+    grid-column: 2;
+  }
+
   .project-list {
     gap: 105px;
   }
@@ -2746,6 +2940,10 @@ a.contact-channel strong {
   .footer p {
     order: 3;
     width: 100%;
+  }
+
+  .footer-links {
+    margin-left: auto;
   }
 }
 

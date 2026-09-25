@@ -361,10 +361,9 @@ contactForm?.addEventListener("submit", async (event) => {
     const response = await fetch(contactForm.dataset.ajaxEndpoint, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(Object.fromEntries(formData.entries())),
+      body: formData,
     });
     const result = await response.json().catch(() => ({}));
     if (!response.ok || result.success === false || result.success === "false") {

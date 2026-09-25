@@ -18,3 +18,4 @@ Thumbs.db
 
 # Local previews and validation artifacts
 .preview/
+release/

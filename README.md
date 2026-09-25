@@ -1,6 +1,6 @@
 # Alvaroo.dev — Portfolio
 
-Portfolio estático de Álvaro, con una dirección visual basada en la referencia: fondo crema, azul marino, azul eléctrico y tipografía en negrita.
+Portfolio comercial estático de Álvaro: servicios, proyectos, proceso de trabajo y contacto. La dirección visual combina fondo crema, azul marino, azul eléctrico, tipografía editorial y composiciones propias para cada proyecto.
 
 ## Abrir en local
 
@@ -17,10 +17,12 @@ Abrir http://127.0.0.1:4173. No necesita instalación de dependencias ni compila
 - `index.html`: contenido, enlaces, portadas y datos de contacto.
 - `style.css`: tipografía, colores y diseño adaptable.
 - `app.js`: menú móvil, detalles de proyectos y copia del correo.
+- `_headers`: cabeceras de seguridad y caché para el despliegue en Cloudflare Pages.
+- `robots.txt`: acceso para buscadores.
 - `images/`: fotografías, capturas optimizadas en WebP y favicon.
 - `fonts/`: tipografías locales y sus licencias OFL.
 
-Los proyectos sin una URL pública facilitada se abren en una ficha con su captura y descripción. No hay formularios que envíen datos ni servicios de analítica. Los enlaces a Instagram y a los proyectos solo se abren al pulsarlos.
+Los proyectos sin una URL pública facilitada se abren en una ficha con su captura y descripción. El formulario de contacto usa FormSubmit para enviar las consultas a `alvarorema2016@gmail.com`; el primer envío requiere confirmar esa dirección desde el correo recibido. No hay servicios de analítica. Los enlaces a Instagram y a los proyectos solo se abren al pulsarlos.
 
 ## Proyectos y material visual
 
@@ -32,6 +34,6 @@ Manrope e Instrument Serif se sirven desde el propio proyecto. Las licencias se 
 
 ## Validación del rediseño
 
-Comprobado con Chromium en anchos de 320, 390, 768, 1024 y 1440 píxeles: sin desbordamiento horizontal, imágenes rotas ni errores de JavaScript. Se comprobaron los enlaces internos, el menú móvil, las cuatro fichas de proyecto, el cierre con Escape, la devolución del foco y los dos resultados del permiso de portapapeles. Auditoría automática Axe WCAG A/AA sin incidencias en escritorio y móvil; no sustituye una revisión manual completa de accesibilidad.
+Comprobado con Chromium en anchos de 320, 390, 768, 1024 y 1440 píxeles: sin desbordamiento horizontal, imágenes rotas ni errores de JavaScript. Se comprobaron los enlaces internos, el menú móvil, las cuatro fichas de proyecto, el cierre con Escape, la devolución del foco, las animaciones reducidas y los dos resultados del permiso de portapapeles. Auditoría automática Axe WCAG A/AA sin incidencias en escritorio y móvil; no sustituye una revisión manual completa de accesibilidad.
 
 Los archivos de las pruebas y las capturas locales están en `.preview/`, excluida de Git.

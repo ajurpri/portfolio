@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f1efe8" />
-    <title>Álvaro — Diseño y desarrollo web · Alvaroo.dev</title>
+    <meta name="theme-color" content="#f2efe6" />
+    <meta name="color-scheme" content="light" />
+    <title>Álvaro — Diseño y desarrollo web · alvaroo.dev</title>
     <meta
       name="description"
-      content="Soy Álvaro, desarrollador web. Diseño webs y aplicaciones a medida. Conoce mis proyectos: Pedrito Barber & Nails, Proyecto Humilladero, Ibernovia y más."
+      content="Diseño y desarrollo web, tiendas online, reservas e identidad visual por Álvaro Jurado. Proyectos a medida desde Andújar para toda España."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
     <meta
       property="og:title"
-      content="Álvaro — Una web a la altura de tu negocio."
+      content="Álvaro — Tu negocio necesita una web a su altura."
     />
     <meta
       property="og:description"
-      content="Diseño y desarrollo web a medida. Una selección de proyectos por Alvaroo.dev."
+      content="Diseño, desarrollo e integraciones web a medida para negocios con algo que contar."
     />
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link
@@ -27,33 +28,43 @@
       type="font/woff"
       crossorigin
     />
-    <link rel="stylesheet" href="style.css?v=2.0.0" />
-    <script src="app.js?v=2.0.0" defer></script>
+    <link
+      rel="preload"
+      href="fonts/instrument-serif.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css?v=3.0.0" />
+    <script src="app.js?v=3.0.0" defer></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
-      <symbol id="icon-external" viewBox="0 0 24 24">
-        <path d="M7 17 17 7M9 7h8v8" />
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 19 19 5M9 5h10v10" />
       </symbol>
       <symbol id="icon-down" viewBox="0 0 24 24">
-        <path d="M12 5v14M7 14l5 5 5-5" />
-      </symbol>
-      <symbol id="icon-up" viewBox="0 0 24 24">
-        <path d="M12 19V5M7 10l5-5 5 5" />
+        <path d="M12 4v16M6 14l6 6 6-6" />
       </symbol>
       <symbol id="icon-plus" viewBox="0 0 24 24">
         <path d="M12 5v14M5 12h14" />
       </symbol>
+      <symbol id="icon-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="12" rx="2" />
+        <path d="M16 8V4H4v12h4" />
+      </symbol>
     </svg>
+
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="header">
-      <div class="container header-inner">
-        <a class="wordmark" href="#inicio" aria-label="Alvaroo.dev — Inicio"
-          >alvaroo<span class="wordmark-dot">.</span
-          ><span class="wordmark-dev">dev</span></a
+
+    <header class="site-header" id="site-header">
+      <div class="header-shell">
+        <a class="brand" href="#inicio" aria-label="alvaroo.dev — Inicio"
+          >alvaroo<span>.</span><small>dev</small></a
         >
         <button
           class="menu-toggle"
+          type="button"
           aria-expanded="false"
           aria-controls="navigation"
           aria-label="Abrir menú"
@@ -65,259 +76,337 @@
           id="navigation"
           aria-label="Navegación principal"
         >
-          <a href="#proyectos">Proyectos <span class="nav-count">07</span></a
-          ><a href="#sobre-mi">Sobre mí</a
-          ><a class="nav-contact" href="#contacto"
+          <a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a
+          ><a href="#sobre-mi">Sobre mí</a>
+          <a class="nav-cta" href="#contacto"
             >Hablemos
-            <svg class="icon icon-external" aria-hidden="true">
-              <use href="#icon-external" /></svg
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow" /></svg
           ></a>
         </nav>
       </div>
     </header>
+
     <main id="contenido">
-      <section class="hero container" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-topline">
-          <p class="eyebrow">Diseño web · Andújar</p>
-          <span class="hero-edition" aria-label="Septiembre de 2026"
-            >09—26</span
-          >
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-signal" aria-hidden="true">
+          <span class="signal-index">AJ—01</span>
+          <span class="signal-rule"></span>
+          <span class="signal-copy">Diseño<br />Código<br />Estrategia</span>
         </div>
-        <h1 id="hero-title">
-          Tu negocio<br />también<br />necesita una<br /><span class="blue-word"
-            >web</span
-          >
-          a su altura.
-        </h1>
-        <div class="hero-bottom">
-          <div class="hero-intro">
-            <p>Webs a medida · Tiendas online · Reservas</p>
-            <a class="work-link" href="#proyectos"
-              >Ver mis proyectos
-              <svg class="icon icon-down" aria-hidden="true">
-                <use href="#icon-down" /></svg
-            ></a>
+        <div class="hero-inner">
+          <div class="hero-meta reveal">
+            <p>
+              <span class="status-dot"></span> Disponible para nuevos proyectos
+            </p>
+            <p>Andújar · Toda España</p>
           </div>
-          <a
-            class="hero-instagram"
-            href="https://www.instagram.com/alvaroo.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@alvaroo.dev
-            <svg class="icon icon-external" aria-hidden="true">
-              <use href="#icon-external" /></svg
-          ></a>
+          <h1 id="hero-title" class="reveal">
+            Tu negocio<br />también necesita<br />una <em>web</em> a su altura.
+          </h1>
+          <div class="hero-bottom reveal">
+            <p class="hero-intro">
+              Diseño y desarrollo webs rápidas, claras y hechas a medida para
+              negocios que quieren dejar de parecer uno más.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#proyectos"
+                >Ver proyectos
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-down" /></svg
+              ></a>
+              <a class="text-link" href="#formulario"
+                >Cuéntame tu idea</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="hero-marquee" aria-hidden="true">
+          <div>
+            <span>Diseño web</span><i>✦</i><span>Desarrollo a medida</span
+            ><i>✦</i><span>Tiendas online</span><i>✦</i><span>Reservas</span
+            ><i>✦</i><span>Integraciones</span><i>✦</i><span>Diseño web</span
+            ><i>✦</i><span>Desarrollo a medida</span><i>✦</i
+            ><span>Tiendas online</span><i>✦</i>
+          </div>
         </div>
       </section>
+
       <section
-        class="projects container"
+        class="services section"
+        id="servicios"
+        aria-labelledby="services-title"
+      >
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="section-label">01 / Lo que hago</p>
+            <h2 id="services-title">
+              No hago «solo una web».<br />Construyo una
+              <em>buena primera impresión.</em>
+            </h2>
+            <p>
+              Desde la primera idea hasta que todo está publicado y funcionando.
+              Sin plantillas que hacen que todos los negocios parezcan el mismo.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card service-card-blue reveal">
+              <div class="service-visual visual-layout" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="service-content">
+                <p class="service-number">01</p>
+                <h3>Diseño web</h3>
+                <p>
+                  Estructura, textos y una identidad visual que encaje con tu
+                  negocio y guíe a cada visita hacia lo importante.
+                </p>
+                <ul>
+                  <li>Web corporativa</li>
+                  <li>Rediseño</li>
+                  <li>Experiencia móvil</li>
+                </ul>
+              </div>
+            </article>
+            <article class="service-card service-card-dark reveal">
+              <div class="service-visual visual-code" aria-hidden="true">
+                <span>&lt;idea&gt;</span><span>rápida</span
+                ><span>accesible</span><span>&lt;/web&gt;</span>
+              </div>
+              <div class="service-content">
+                <p class="service-number">02</p>
+                <h3>Desarrollo a medida</h3>
+                <p>
+                  Una web sólida, rápida y fácil de usar, construida alrededor
+                  de lo que necesitas y preparada para crecer.
+                </p>
+                <ul>
+                  <li>Frontend</li>
+                  <li>Backend</li>
+                  <li>SEO técnico</li>
+                </ul>
+              </div>
+            </article>
+            <article class="service-card service-card-light reveal">
+              <div class="service-visual visual-flow" aria-hidden="true">
+                <span>Tu web</span><i></i><span>Reservas</span><i></i
+                ><span>Datos</span>
+              </div>
+              <div class="service-content">
+                <p class="service-number">03</p>
+                <h3>Herramientas que trabajan</h3>
+                <p>
+                  Reservas, tiendas, paneles e integraciones para que la web no
+                  sea un escaparate: que también te quite trabajo.
+                </p>
+                <ul>
+                  <li>E-commerce</li>
+                  <li>Automatizaciones</li>
+                  <li>APIs</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="studio-services reveal" aria-labelledby="studio-title">
+            <div class="studio-heading">
+              <p class="section-label">También / Marca y contenido</p>
+              <h3 id="studio-title">La web no vive sola.</h3>
+              <p>
+                También puedo cuidar lo que ocurre alrededor: la identidad, el
+                contenido y las piezas que llevan gente hasta ella.
+              </p>
+            </div>
+            <div class="studio-list">
+              <article>
+                <span>04</span>
+                <h4>Gestión de redes sociales</h4>
+                <p>Una presencia coherente, activa y reconocible.</p>
+              </article>
+              <article>
+                <span>05</span>
+                <h4>Identidad visual y logotipos</h4>
+                <p>Una imagen propia para dejar de parecer uno más.</p>
+              </article>
+              <article>
+                <span>06</span>
+                <h4>Carteles y banners</h4>
+                <p>Piezas digitales e impresas alineadas con tu marca.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="projects section"
         id="proyectos"
         aria-labelledby="projects-title"
       >
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow section-index">01 / Trabajo seleccionado</p>
+        <div class="container">
+          <div class="projects-heading reveal">
+            <p class="section-label">02 / Trabajo seleccionado</p>
             <h2 id="projects-title">Proyectos con <em>nombre propio.</em></h2>
+            <p>
+              Negocios e ideas distintas. Una solución pensada para cada una.
+            </p>
           </div>
-          <p class="section-aside">
-            Negocios, historias y herramientas.<br />Cada proyecto tiene su
-            manera.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article class="project project-pedrito">
-            <a
-              class="project-cover pedrito-cover"
-              href="https://pedritobarbershopandnails.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visitar Pedrito Barber & Nails (nueva pestaña)"
-              ><div class="cover-topline">
-                <span>Barbería & estética</span><span>Andújar, Jaén</span>
-              </div>
-              <div class="pedrito-art">
-                <div class="pedrito-photo">
-                  <img
+          <div class="project-list">
+            <article class="project project-pedrito reveal">
+              <a
+                class="project-media"
+                href="https://pedritobarbershopandnails.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Pedrito Barber & Nails (nueva pestaña)"
+              >
+                <span class="project-tag">Servicios + reservas</span>
+                <span class="pedrito-gallery"
+                  ><img
                     src="images/pedrito-cut.webp"
-                    alt="Trabajo de corte de cabello de Pedrito Barber"
+                    alt="Corte de cabello de Pedrito Barber"
                     width="525"
                     height="700"
                     fetchpriority="high"
-                  />
-                </div>
-                <div class="nails-photo">
-                  <img
+                  /><img
                     src="images/pedrito-nails.webp"
-                    alt="Manicura rosa de Nails Dreams & Beauty"
+                    alt="Manicura de Nails Dreams & Beauty"
                     width="340"
                     height="450"
                     loading="lazy"
-                  />
-                </div>
-                <span class="pedrito-type" aria-hidden="true"
-                  >PEDRITO<span>BARBER & NAILS</span></span
+                  /><strong aria-hidden="true"
+                    >PEDRITO<small>BARBER & NAILS</small></strong
+                  ></span
                 >
-              </div>
-              <div class="cover-bottomline">
-                <span>Un espacio. Dos estilos.</span
-                ><span class="cover-arrow" aria-hidden="true"
-                  ><svg class="icon"><use href="#icon-external" /></svg
-                ></span></div
-            ></a>
-            <div class="project-caption">
-              <div>
-                <p class="project-kind">
-                  Web de negocio · Servicios & reservas
-                </p>
+                <span class="media-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </a>
+              <div class="project-info">
+                <p class="project-index">01 / Web de negocio</p>
                 <h3>
                   <a
                     href="https://pedritobarbershopandnails.es/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Pedrito Barber & Nails
-                    <svg class="icon icon-external" aria-hidden="true">
-                      <use href="#icon-external" /></svg
-                  ></a>
+                    >Pedrito Barber & Nails</a
+                  >
                 </h3>
-              </div>
-              <span class="project-number">01</span>
-            </div>
-            <p class="project-description">
-              Barbería y manicura bajo el mismo techo. Una web para conocer los
-              servicios, ver sus trabajos y encontrar la próxima cita.
-            </p>
-          </article>
-          <article class="project project-humilladero">
-            <a
-              class="project-cover humilladero-cover"
-              href="https://proyectohumilladero.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visitar Proyecto Humilladero (nueva pestaña)"
-              ><div class="cover-topline">
-                <span>Una historia compartida</span><span>1227—2027</span>
-              </div>
-              <div class="humilladero-art">
-                <span class="humilladero-type" aria-hidden="true"
-                  >Proyecto<br /><em>Humilladero</em></span
-                ><img
-                  src="images/humilladero.webp"
-                  alt="Diseño del monumento del Proyecto Humilladero"
-                  width="850"
-                  height="478"
-                  loading="lazy"
-                />
-              </div>
-              <div class="cover-bottomline">
-                <span>VIII Centenario · Andújar</span
-                ><span class="cover-arrow" aria-hidden="true"
-                  ><svg class="icon"><use href="#icon-external" /></svg
-                ></span></div
-            ></a>
-            <div class="project-caption">
-              <div>
-                <p class="project-kind">
-                  Web cultural · Proyecto conmemorativo
+                <p>
+                  Una barbería y un estudio de manicura bajo el mismo techo. Una
+                  web clara para descubrir servicios, trabajos y reservar la
+                  próxima cita.
                 </p>
+                <p class="project-tech">Diseño · Desarrollo · Reservas</p>
+              </div>
+            </article>
+            <article class="project project-humilladero reveal">
+              <a
+                class="project-media"
+                href="https://proyectohumilladero.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Proyecto Humilladero (nueva pestaña)"
+              >
+                <span class="project-tag">Cultura + historia</span
+                ><span class="humilladero-gallery"
+                  ><strong aria-hidden="true"
+                    >Proyecto<br /><em>Humilladero</em></strong
+                  ><img
+                    src="images/humilladero.webp"
+                    alt="Diseño del monumento del Proyecto Humilladero"
+                    width="850"
+                    height="478"
+                    loading="lazy" /></span
+                ><span class="media-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </a>
+              <div class="project-info">
+                <p class="project-index">02 / Proyecto cultural</p>
                 <h3>
                   <a
                     href="https://proyectohumilladero.es/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Proyecto Humilladero
-                    <svg class="icon icon-external" aria-hidden="true">
-                      <use href="#icon-external" /></svg
-                  ></a>
+                    >Proyecto Humilladero</a
+                  >
                 </h3>
+                <p>
+                  La historia y el diseño de una iniciativa para el VIII
+                  Centenario de la Virgen de la Cabeza, con información y
+                  reserva de piezas.
+                </p>
+                <p class="project-tech">
+                  Diseño editorial · Desarrollo · Contenido
+                </p>
               </div>
-              <span class="project-number">02</span>
-            </div>
-            <p class="project-description">
-              La historia y el diseño de un proyecto para el VIII Centenario de
-              la Virgen de la Cabeza, con información y reserva de piezas.
-            </p>
-          </article>
-          <article class="project project-ibernovia">
-            <a
-              class="project-cover browser-cover ibernovia-cover"
-              href="https://ibernovia.es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visitar Ibernovia Atelier (nueva pestaña)"
-              ><div class="cover-topline">
-                <span>Moda nupcial</span><span>Atelier & e-commerce</span>
-              </div>
-              <div class="browser-window">
-                <div class="browser-chrome" aria-hidden="true">
-                  <i></i><i></i><i></i><span>ibernovia.es</span>
-                </div>
-                <img
-                  src="images/ibernovia.webp"
-                  alt="Captura de Ibernovia Atelier y su colección de vestidos"
-                  width="1400"
-                  height="652"
-                  loading="lazy"
-                />
-              </div>
-              <div class="cover-bottomline">
-                <span>El detalle también se lleva.</span
-                ><span class="cover-arrow" aria-hidden="true"
-                  ><svg class="icon"><use href="#icon-external" /></svg
-                ></span></div
-            ></a>
-            <div class="project-caption">
-              <div>
-                <p class="project-kind">E-commerce · Vue & Spring Boot</p>
+            </article>
+            <article class="project project-ibernovia reveal">
+              <a
+                class="project-media"
+                href="https://ibernovia.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Ibernovia Atelier (nueva pestaña)"
+              >
+                <span class="project-tag">Moda + e-commerce</span
+                ><span class="browser-frame"
+                  ><span class="browser-bar" aria-hidden="true"
+                    ><i></i><i></i><i></i><small>ibernovia.es</small></span
+                  ><img
+                    src="images/ibernovia.webp"
+                    alt="Captura de Ibernovia Atelier"
+                    width="1400"
+                    height="652"
+                    loading="lazy" /></span
+                ><span class="media-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-arrow" /></svg
+                ></span>
+              </a>
+              <div class="project-info">
+                <p class="project-index">03 / Tienda online</p>
                 <h3>
                   <a
                     href="https://ibernovia.es/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Ibernovia Atelier
-                    <svg class="icon icon-external" aria-hidden="true">
-                      <use href="#icon-external" /></svg
-                  ></a>
+                    >Ibernovia Atelier</a
+                  >
                 </h3>
+                <p>
+                  Un catálogo de moda nupcial con citas en atelier y tarifas
+                  según el perfil del cliente. Diseño y gestión en un mismo
+                  lugar.
+                </p>
+                <p class="project-tech">Vue · Spring Boot · E-commerce</p>
               </div>
-              <span class="project-number">03</span>
-            </div>
-            <p class="project-description">
-              Un catálogo de moda nupcial con citas en atelier y tarifas según
-              el perfil de cliente. Diseño y gestión en un mismo lugar.
-            </p>
-          </article>
-          <article class="project project-tenis">
-            <button
-              class="project-cover browser-cover tenis-cover"
-              type="button"
-              data-project="tenis"
-              aria-haspopup="dialog"
-              aria-label="Ver detalles de Tenis Isturgi"
-            >
-              <span class="cover-topline"
-                ><span>Dentro y fuera de la pista</span
-                ><span>Club de tenis</span></span
-              ><span class="tenis-title" aria-hidden="true"
-                >Punto. Set. <em>Web.</em></span
-              ><span class="browser-window"
-                ><span class="browser-chrome" aria-hidden="true"
-                  ><i></i><i></i><i></i
-                  ><span>Tenis Isturgi / Portal del club</span></span
-                ><img
-                  src="images/tenis.webp"
-                  alt="Captura del portal deportivo Tenis Isturgi"
-                  width="1400"
-                  height="546"
-                  loading="lazy" /></span
-              ><span class="cover-bottomline"
-                ><span>Una plataforma para todo el club.</span
-                ><span class="cover-arrow" aria-hidden="true"
-                  ><svg class="icon"><use href="#icon-plus" /></svg></span
-              ></span>
-            </button>
-            <div class="project-caption">
-              <div>
-                <p class="project-kind">Aplicación web · React & Strapi</p>
+            </article>
+            <article class="project project-tenis reveal">
+              <button
+                class="project-media"
+                type="button"
+                data-project="tenis"
+                aria-haspopup="dialog"
+                aria-label="Ver detalles de Tenis Isturgi"
+              >
+                <span class="project-tag">Club + gestión</span
+                ><span class="tenis-heading" aria-hidden="true"
+                  >Punto. Set. <em>Web.</em></span
+                ><span class="browser-frame"
+                  ><span class="browser-bar" aria-hidden="true"
+                    ><i></i><i></i><i></i><small>Portal del club</small></span
+                  ><img
+                    src="images/tenis.webp"
+                    alt="Captura del portal deportivo Tenis Isturgi"
+                    width="1400"
+                    height="546"
+                    loading="lazy" /></span
+                ><span class="media-arrow" aria-hidden="true"
+                  ><svg class="icon"><use href="#icon-plus" /></svg
+                ></span>
+              </button>
+              <div class="project-info">
+                <p class="project-index">04 / Aplicación web</p>
                 <h3>
                   <button
                     type="button"
@@ -325,285 +414,371 @@
                     aria-haspopup="dialog"
                   >
                     Tenis Isturgi
-                    <svg class="icon icon-external" aria-hidden="true">
-                      <use href="#icon-external" />
-                    </svg>
                   </button>
                 </h3>
-              </div>
-              <span class="project-number">04</span>
-            </div>
-            <p class="project-description">
-              Reservas de pistas, calendarios de liga y cruces de partidos. Una
-              plataforma para organizar el día a día del club.
-            </p>
-          </article>
-        </div>
-        <div class="archive-heading">
-          <h3>También he construido</h3>
-          <span class="eyebrow">Más allá de una web</span>
-        </div>
-        <div class="archive">
-          <details class="archive-item">
-            <summary>
-              <span class="archive-number">05</span
-              ><span class="archive-name">Reaktor Redes</span
-              ><span class="archive-category">Monitorización de red</span
-              ><span class="archive-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="archive-content">
-              <img
-                src="images/redes.webp"
-                alt="Mapa de aulas y estado de los equipos de Reaktor Redes"
-                width="1000"
-                height="633"
-                loading="lazy"
-              />
-              <div>
                 <p>
-                  Un mapa interactivo del instituto que permite consultar qué
-                  equipos están activos y localizar incidencias de red por aula.
+                  Reservas de pistas, calendarios de liga y cruces de partidos.
+                  Una plataforma para organizar el día a día del club.
                 </p>
-                <p class="technology-list">Spring Boot / Sockets TCP / SVG</p>
-                <button
-                  class="text-link"
-                  type="button"
-                  data-project="redes"
-                  aria-haspopup="dialog"
-                >
-                  Ver el proyecto
-                  <svg class="icon icon-external" aria-hidden="true">
-                    <use href="#icon-external" />
-                  </svg>
-                </button>
+                <p class="project-tech">React · Strapi · PostgreSQL</p>
               </div>
+            </article>
+          </div>
+
+          <div class="archive reveal">
+            <div class="archive-title">
+              <h3>Más cosas que funcionan</h3>
+              <p>Herramientas, automatizaciones y aplicaciones.</p>
             </div>
-          </details>
-          <details class="archive-item">
-            <summary>
-              <span class="archive-number">06</span
-              ><span class="archive-name">Torneo Pádel</span
-              ><span class="archive-category">Aplicación sin conexión</span
-              ><span class="archive-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="archive-content">
-              <img
-                src="images/padel.webp"
-                alt="Interfaz del organizador de torneos de pádel"
-                width="1400"
-                height="511"
-                loading="lazy"
-              />
-              <div>
-                <p>
-                  Organización de torneos incluso sin conexión: horarios según
-                  disponibilidad y exportación de agendas a calendario e imagen.
-                </p>
-                <p class="technology-list">
-                  JavaScript / PWA / LocalStorage / iCal
-                </p>
-                <button
-                  class="text-link"
-                  type="button"
-                  data-project="padel"
-                  aria-haspopup="dialog"
-                >
-                  Ver el proyecto
-                  <svg class="icon icon-external" aria-hidden="true">
-                    <use href="#icon-external" />
-                  </svg>
-                </button>
+            <details>
+              <summary>
+                <span>05</span><strong>Reaktor Redes</strong
+                ><small>Monitorización de red</small><i>+</i>
+              </summary>
+              <div class="archive-body">
+                <img
+                  src="images/redes.webp"
+                  alt="Mapa de aulas y equipos de Reaktor Redes"
+                  width="1000"
+                  height="633"
+                  loading="lazy"
+                />
+                <div>
+                  <p>
+                    Un mapa interactivo del instituto para comprobar equipos
+                    activos y localizar incidencias de red por aula.
+                  </p>
+                  <p class="project-tech">Spring Boot · Sockets TCP · SVG</p>
+                  <button
+                    type="button"
+                    data-project="redes"
+                    aria-haspopup="dialog"
+                  >
+                    Ver proyecto ↗
+                  </button>
+                </div>
               </div>
-            </div>
-          </details>
-          <details class="archive-item">
-            <summary>
-              <span class="archive-number">07</span
-              ><span class="archive-name">Mantecados Patriarca</span
-              ><span class="archive-category">Pedidos & automatización</span
-              ><span class="archive-plus" aria-hidden="true">+</span>
-            </summary>
-            <div class="archive-content">
-              <img
-                src="images/patriarca.webp"
-                alt="Sistema de pedidos de Mantecados Patriarca"
-                width="1400"
-                height="580"
-                loading="lazy"
-              />
-              <div>
-                <p>
-                  Gestión de pedidos para una campaña escolar de dulces
-                  navideños, con sincronización en Google Sheets para consultar
-                  las ventas.
-                </p>
-                <p class="technology-list">
-                  Spring Boot / Google Sheets API / Firebase Auth
-                </p>
-                <button
-                  class="text-link"
-                  type="button"
-                  data-project="patriarca"
-                  aria-haspopup="dialog"
-                >
-                  Ver el proyecto
-                  <svg class="icon icon-external" aria-hidden="true">
-                    <use href="#icon-external" />
-                  </svg>
-                </button>
+            </details>
+            <details>
+              <summary>
+                <span>06</span><strong>Torneo Pádel</strong
+                ><small>Aplicación sin conexión</small><i>+</i>
+              </summary>
+              <div class="archive-body">
+                <img
+                  src="images/padel.webp"
+                  alt="Aplicación para organizar torneos de pádel"
+                  width="1400"
+                  height="511"
+                  loading="lazy"
+                />
+                <div>
+                  <p>
+                    Horarios según disponibilidad, funcionamiento sin conexión y
+                    exportación de agendas a calendario e imagen.
+                  </p>
+                  <p class="project-tech">JavaScript · PWA · iCal</p>
+                  <button
+                    type="button"
+                    data-project="padel"
+                    aria-haspopup="dialog"
+                  >
+                    Ver proyecto ↗
+                  </button>
+                </div>
               </div>
-            </div>
-          </details>
+            </details>
+            <details>
+              <summary>
+                <span>07</span><strong>Mantecados Patriarca</strong
+                ><small>Pedidos y automatización</small><i>+</i>
+              </summary>
+              <div class="archive-body">
+                <img
+                  src="images/patriarca.webp"
+                  alt="Sistema de pedidos de Mantecados Patriarca"
+                  width="1400"
+                  height="580"
+                  loading="lazy"
+                />
+                <div>
+                  <p>
+                    Gestión de pedidos para una campaña escolar, sincronizada
+                    con Google Sheets para consultar y trabajar las ventas.
+                  </p>
+                  <p class="project-tech">
+                    Spring Boot · Google Sheets · Firebase
+                  </p>
+                  <button
+                    type="button"
+                    data-project="patriarca"
+                    aria-haspopup="dialog"
+                  >
+                    Ver proyecto ↗
+                  </button>
+                </div>
+              </div>
+            </details>
+          </div>
         </div>
       </section>
-      <section class="about" id="sobre-mi" aria-labelledby="about-title">
+
+      <section
+        class="about section"
+        id="sobre-mi"
+        aria-labelledby="about-title"
+      >
+        <canvas
+          class="about-canvas"
+          id="about-canvas"
+          aria-hidden="true"
+        ></canvas>
+        <div class="about-blueprint" aria-hidden="true">
+          <span>VISIBLE</span><span>INVISIBLE</span><i></i><i></i><i></i>
+        </div>
         <div class="container">
-          <div class="about-top">
-            <p class="eyebrow">02 / La persona detrás</p>
-            <a
-              class="social-link"
-              href="https://www.instagram.com/alvaroo.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >@alvaroo.dev
-              <svg class="icon icon-external" aria-hidden="true">
-                <use href="#icon-external" /></svg
-            ></a>
+          <div class="about-head reveal">
+            <p class="section-label">03 / Detrás de la pantalla</p>
+            <p>Álvaro Jurado · Diseñador y desarrollador</p>
           </div>
           <div class="about-grid">
-            <div class="about-statement">
+            <div class="about-statement reveal">
+              <p class="about-name">Hola, soy Álvaro Jurado.</p>
               <h2 id="about-title">
-                Soy Álvaro.<br />Me gusta hacer<br />que las cosas<br /><em
-                  >funcionen.</em
+                Diseño lo que ves.<br /><em
+                  >Construyo lo que hace que funcione.</em
                 >
               </h2>
-              <span class="about-signature" aria-hidden="true"
-                >a<span>.</span></span
-              >
+              <p class="about-manifesto">
+                La parte bonita importa. La parte invisible decide si sirve.
+              </p>
             </div>
-            <div class="about-copy">
-              <p class="about-intro">
-                Una barbería, un club de tenis, un proyecto cultural. Lo que más
-                me interesa de hacer webs es todo lo que hay detrás de ellas.
+            <figure class="about-portrait reveal">
+              <span class="portrait-marker" aria-hidden="true">AJ</span>
+              <img
+                src="images/logo.jpeg"
+                alt="Retrato ilustrado de Álvaro Jurado"
+                width="1024"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>
+                <span>AJ / 1998</span><span>Andújar · 38.039° N</span>
+              </figcaption>
+            </figure>
+            <div class="about-copy reveal">
+              <p class="about-lead">
+                No diseño para llenar una pantalla. Diseño para que alguien
+                entienda, confíe y dé el siguiente paso.
               </p>
               <p>
-                Trabajo tanto en la parte que ves como en la que hace que todo
-                funcione: diseño, desarrollo, bases de datos e integraciones. Me
-                gusta entender para qué se va a usar una web antes de empezar a
-                construirla.
+                Trabajo en los dos lados de una web: el que una persona ve y el
+                que hace que todo responda. Primero entiendo el negocio; después
+                construyo una solución que le pertenezca de verdad.
               </p>
-              <p>
-                Y cuidar lo pequeño: que se lea bien en el móvil, que reservar
-                sea sencillo y que quien la use encuentre lo que necesita.
-              </p>
-              <div class="stack" id="habilidades">
-                <h3>Mis herramientas</h3>
-                <dl>
-                  <div>
-                    <dt>Interfaz</dt>
-                    <dd>React, Vue, JavaScript, HTML & CSS</dd>
-                  </div>
-                  <div>
-                    <dt>Backend</dt>
-                    <dd>Java, Spring Boot, Node.js, Python</dd>
-                  </div>
-                  <div>
-                    <dt>Datos</dt>
-                    <dd>MySQL, PostgreSQL, Firebase</dd>
-                  </div>
-                  <div>
-                    <dt>Conexiones</dt>
-                    <dd>APIs, Google Sheets, PWAs, Docker</dd>
-                  </div>
-                </dl>
+              <blockquote>
+                «No empiezo por los colores. Empiezo por la pregunta que la web
+                tiene que resolver.»
+              </blockquote>
+              <div class="stack">
+                <p><span>Interfaz</span> React, Vue, JavaScript, HTML & CSS</p>
+                <p><span>Backend</span> Java, Spring Boot, Node.js, Python</p>
+                <p><span>Datos</span> MySQL, PostgreSQL, Firebase</p>
+                <p><span>Conexiones</span> APIs, Google Sheets, PWAs, Docker</p>
               </div>
             </div>
           </div>
-          <div class="process">
-            <p class="eyebrow">De principio a fin</p>
-            <div>
+          <div class="process reveal" aria-label="Proceso de trabajo">
+            <article>
               <span>01</span>
-              <h3>Lo hablamos.</h3>
-              <p>Qué necesitas, para quién y qué tiene que resolver.</p>
-            </div>
-            <div>
+              <h3>Lo hablamos</h3>
+              <p>Qué necesitas, para quién y qué debería resolver.</p>
+            </article>
+            <article>
               <span>02</span>
-              <h3>Le damos forma.</h3>
-              <p>Estructura, diseño y desarrollo con sentido.</p>
-            </div>
-            <div>
+              <h3>Le damos forma</h3>
+              <p>Estructura, diseño y desarrollo con una dirección clara.</p>
+            </article>
+            <article>
               <span>03</span>
-              <h3>Lo ponemos en marcha.</h3>
-              <p>Revisión de los detalles y la web lista para salir.</p>
-            </div>
+              <h3>Lo ponemos en marcha</h3>
+              <p>Revisamos los detalles y dejamos la web lista para crecer.</p>
+            </article>
           </div>
         </div>
       </section>
+
       <section class="contact" id="contacto" aria-labelledby="contact-title">
         <div class="container">
-          <div class="contact-top">
-            <p class="eyebrow">03 / Tu próximo proyecto</p>
-            <span class="contact-note">Todo empieza con un «hola».</span>
+          <div class="contact-top reveal">
+            <p class="section-label">04 / Tu próximo proyecto</p>
+            <p>Álvaro Jurado · Andújar / Toda España</p>
           </div>
-          <a class="contact-title-link" href="mailto:alvarorema2016@gmail.com"
-            ><h2 id="contact-title">¿Lo <em>hacemos?</em></h2>
-            <span class="contact-icon" aria-hidden="true"
-              ><svg class="icon"><use href="#icon-external" /></svg></span
+          <a
+            class="contact-heading reveal"
+            href="#formulario"
+            ><span>¿Tienes una idea?</span>
+            <h2 id="contact-title">Vamos a hacerla <em>real.</em></h2>
+            <i aria-hidden="true"
+              ><svg class="icon"><use href="#icon-arrow" /></svg></i
           ></a>
-          <div class="contact-bottom">
-            <p>Cuéntame qué tienes en mente.<br />Vemos cómo darle forma.</p>
-            <div class="email-contact">
-              <a href="mailto:alvarorema2016@gmail.com"
-                >alvarorema2016@gmail.com</a
-              ><button
-                id="copy-email"
-                type="button"
-                aria-label="Copiar dirección de correo"
-              >
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <rect x="8" y="8" width="12" height="12" rx="1" />
-                  <path d="M16 8V4H4v12h4" />
-                </svg></button
-              ><span
-                id="copy-status"
-                class="copy-status"
-                role="status"
-                aria-live="polite"
-              ></span>
+          <div class="contact-form-shell reveal" id="formulario">
+            <div class="contact-form-intro">
+              <p class="section-label">Formulario breve</p>
+              <h3>Un buen proyecto empieza por entenderlo.</h3>
+              <p>
+                Déjame los datos esenciales. Te responderé personalmente para
+                conocer el negocio y ver si puedo ayudarte.
+              </p>
+              <span>Respuesta habitual: 24–48 h laborables.</span>
             </div>
-            <a
-              class="instagram-contact"
-              href="https://www.instagram.com/alvaroo.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >O por Instagram
-              <svg class="icon icon-external" aria-hidden="true">
-                <use href="#icon-external" /></svg
-            ></a>
+            <form
+              class="contact-form"
+              action="https://formsubmit.co/alvarorema2016@gmail.com"
+              method="post"
+              data-ajax-endpoint="https://formsubmit.co/ajax/alvarorema2016@gmail.com"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo proyecto desde alvaroo.dev"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <label class="form-honey" aria-hidden="true">
+                No rellenar
+                <input
+                  type="text"
+                  name="_honey"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </label>
+              <label class="form-field">
+                <span>Nombre *</span>
+                <input
+                  type="text"
+                  name="Nombre"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+              <label class="form-field">
+                <span>Email *</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+              <label class="form-field">
+                <span>Teléfono</span>
+                <input
+                  type="tel"
+                  name="Teléfono"
+                  autocomplete="tel"
+                  inputmode="tel"
+                />
+              </label>
+              <label class="form-field">
+                <span>¿Qué necesitas? *</span>
+                <select name="Proyecto" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option>Web corporativa</option>
+                  <option>Tienda online</option>
+                  <option>Reservas o automatización</option>
+                  <option>Rediseño de una web</option>
+                  <option>Identidad visual o contenido</option>
+                  <option>Otro proyecto</option>
+                </select>
+              </label>
+              <label class="form-field form-field-full">
+                <span>Cuéntame un poco sobre el proyecto *</span>
+                <textarea
+                  name="Mensaje"
+                  rows="5"
+                  required
+                  placeholder="Qué haces, qué necesitas y qué te gustaría conseguir."
+                ></textarea>
+              </label>
+              <label class="form-consent form-field-full">
+                <input
+                  type="checkbox"
+                  name="Consentimiento"
+                  value="Aceptado"
+                  required
+                />
+                <span>
+                  Acepto que estos datos se utilicen únicamente para responder
+                  a mi consulta.
+                </span>
+              </label>
+              <div class="form-actions form-field-full">
+                <button class="form-submit" type="submit">
+                  <span>Enviar proyecto</span>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-arrow" />
+                  </svg>
+                </button>
+                <p class="form-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+          <div class="contact-bottom reveal">
+            <p class="contact-intro">
+              Cuéntame qué tienes en mente.<br />Vemos juntos cómo darle forma.
+            </p>
+            <div class="contact-channel">
+              <span>Correo</span>
+              <div class="email-wrap">
+                <a href="mailto:alvarorema2016@gmail.com"
+                  >alvarorema2016@gmail.com</a
+                ><button
+                  id="copy-email"
+                  type="button"
+                  aria-label="Copiar dirección de correo"
+                >
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-copy" />
+                  </svg></button
+                ><span id="copy-status" role="status" aria-live="polite"></span>
+              </div>
+            </div>
+            <a class="contact-channel" href="tel:+34674491989">
+              <span>Teléfono</span><strong>674 491 989</strong>
+            </a>
+            <div class="contact-channel contact-socials">
+              <span>Redes</span>
+              <a
+                href="https://www.instagram.com/alvaroo.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram ↗</a
+              >
+              <a
+                href="https://www.tiktok.com/@alvaroo.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TikTok ↗</a
+              >
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer container">
-      <a class="wordmark" href="#inicio"
-        >alvaroo<span class="wordmark-dot">.</span
-        ><span class="wordmark-dev">dev</span></a
-      >
-      <p>© <span id="year">2026</span> Álvaro · Diseño & desarrollo web.</p>
-      <a href="#inicio" class="back-to-top"
-        >Volver arriba
-        <svg class="icon icon-up" aria-hidden="true">
-          <use href="#icon-up" /></svg
-      ></a>
+
+    <footer class="footer">
+      <div class="container">
+        <a class="brand" href="#inicio"
+          >alvaroo<span>.</span><small>dev</small></a
+        >
+        <p>
+          © <span id="year">2026</span> Álvaro Jurado · Diseño & desarrollo web.
+        </p>
+        <a href="#inicio">Volver arriba ↑</a>
+      </div>
     </footer>
+
     <dialog
       class="project-dialog"
       id="project-dialog"
@@ -618,11 +793,11 @@
         >
           ×
         </button>
-        <p class="eyebrow" id="dialog-category"></p>
+        <p class="section-label" id="dialog-category"></p>
         <h2 id="dialog-title"></h2>
         <img id="dialog-image" alt="" />
         <p id="dialog-description"></p>
-        <p class="technology-list" id="dialog-technologies"></p>
+        <p class="project-tech" id="dialog-technologies"></p>
       </div>
     </dialog>
   </body>
